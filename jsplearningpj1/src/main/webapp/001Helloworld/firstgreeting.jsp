@@ -9,15 +9,10 @@
 </head>
 <body>
 <%for( fontsize =1; fontsize <=3; fontsize++) { %>
-    <font color="green" size="<%= fontsize%>"> ${fontsize} , JSP tutorial </font>
+    <font color="green" size="<%= fontsize%>">
+	<%= fontsize %>,JSP tutorial </font>
     <br>
-    
 <% }%>
-
-
-
-
-
 
 
  Hello World!<br>
