@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status ="WARN" name="MyBlog">
+	<Appenders>
+		<Servlet name="Servlet">
+			<PatternLayout pattern="%m%ex{none}"/>
+		</Servlet>
+		<File name="File" fileName="${sys:catalina.home}/logs/application.log" append="true" immediateFLush="true">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [t%] %-5level %logger{36} - %msg" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="File"/>
+			<AppenderRef ref="Servlet"/>
+		</Root>
+	</Loggers>
+</Configuration>
